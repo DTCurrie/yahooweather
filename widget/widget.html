@@ -1,0 +1,35 @@
+<div ng-controller="MainController" class="yahooweather-widget">
+    <link href="https://rawgit.com/DTCurrie/yahooweather/master/widget/yahooweather.min.css" rel="stylesheet"
+          property="stylesheet">
+    <div class="yahooweather-widget-container">
+        <div class="header">
+            <p class="header-text">
+                {{ weather.location.city }}, {{ weather.location.region}}
+            </p>
+            <div class="header-body">
+                <div class="temp">
+                    <p class="temp-text">{{ weather.item.condition.temp }}&deg;<!--{{ weather.units.temperature}}--></p>
+                </div>
+                <div class="conditions">
+                    <img ng-src="{{ weather.img }}" class="conditions-image">
+                    <p class="conditions-text">
+                        {{ weather.item.condition.text }}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="forecast">
+            <div class="daily" ng-repeat="day in weather.item.forecast | limitTo:5">
+                <p class="day">{{ day.day }}</p>
+                <p class="temp">{{ day.high }}&deg; / {{ day.low }}&deg;</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular.min.js"></script>
+    <script src="https://rawgit.com/DTCurrie/yahooweather/master/widget/yahooweather.min.js"></script>
+    <script>
+        angular.element(document).ready(function () {
+            angular.bootstrap(document, ['weather']);
+        });
+    </script>
+</div>
