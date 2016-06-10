@@ -22,7 +22,7 @@ app.use(methodOverride('X-HTTP-Method-Override'));
 app.use(express.static(publicPath));
 
 // ----- Get directory paths
-app.use('/test', express.static(publicPath + '/test'));
+app.use('/widget', express.static(publicPath + '/widget'));
 
 // ----- CORS
 app.use(function(req, res, next) {
