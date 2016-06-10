@@ -1,0 +1,32 @@
+{
+  "name": "yahooweather",
+  "version": "0.0.1",
+  "repository": "https://github.com/DTCurrie/yahooweather",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "dependencies": {
+    "async": "latest",
+    "body-parser": "latest",
+    "cors": "latest",
+    "ejs": "latest",
+    "express": "latest",
+    "express-jwt": "latest",
+    "grunt": "latest",
+    "jsonwebtoken": "latest",
+    "method-override": "latest"
+  },
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-banner": "latest",
+    "grunt-cache-control": "latest",
+    "grunt-contrib-cssmin": "latest",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-copy": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-less": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch": "latest"
+  }
+}
