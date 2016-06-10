@@ -7,10 +7,6 @@
 .yahooweather-widget * {
   box-sizing: border-box;
 }
-.yahooweather-widget body {
-  height: 100%;
-  width: 100%;
-}
 .yahooweather-widget-container {
   width: 310px;
   height: 160px;
@@ -96,7 +92,14 @@
 }
 #yahooweather {
   display: block;
+  width: 100%;
+  float: left;
   border: none;
   padding: 0;
   margin: 0;
+}
+#yahooweather object {
+  display: block;
+  width: 100%;
+  float: left;
 }
