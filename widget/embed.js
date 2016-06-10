@@ -8,6 +8,8 @@ window.onload = function(){
     link.rel = 'stylesheet';
     link.href = 'yahooweather.min.css';
 
+    console.log("link created");
+
     head.appendChild(link);
 
     document.getElementById("yahooweather")
