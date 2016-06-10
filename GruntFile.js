@@ -147,7 +147,7 @@ module.exports = function (grunt) {
             views: {
                 expand: true,
                 cwd: 'app/views/',
-                src: ['index.html'],
+                src: ['widget.html'],
                 dest: 'widget/'
             }
         },
