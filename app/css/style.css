@@ -4,10 +4,7 @@
   padding: 0;
   margin: 0;
 }
-#yahooweather * {
-  box-sizing: border-box;
-}
-#yahooweather html.yahooweather-widget {
+html.yahooweather-widget {
   display: block;
   width: 100%;
   float: left;
@@ -15,11 +12,14 @@
   overflow-x: hidden;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-#yahooweather html.yahooweather-widget body {
+html.yahooweather-widget * {
+  box-sizing: border-box;
+}
+html.yahooweather-widget body {
   height: 100%;
   width: 100%;
 }
-#yahooweather html.yahooweather-widget-container {
+html.yahooweather-widget-container {
   width: 310px;
   height: 160px;
   position: absolute;
@@ -32,58 +32,58 @@
   border-radius: 5px;
   box-shadow: 7px 7px 5px #4d4d4d;
 }
-#yahooweather html.yahooweather-widget-container .header {
+html.yahooweather-widget-container .header {
   display: block;
   width: 100%;
   float: left;
 }
-#yahooweather html.yahooweather-widget-container .header-text,
-#yahooweather html.yahooweather-widget-container .header-body {
+html.yahooweather-widget-container .header-text,
+html.yahooweather-widget-container .header-body {
   display: block;
   width: 100%;
   float: left;
 }
-#yahooweather html.yahooweather-widget-container .header-text {
+html.yahooweather-widget-container .header-text {
   font-size: 18px;
   margin: 10px 0 0 10px;
 }
-#yahooweather html.yahooweather-widget-container .header-body {
+html.yahooweather-widget-container .header-body {
   margin: 0 0 0 10px;
 }
-#yahooweather html.yahooweather-widget-container .header-body .temp,
-#yahooweather html.yahooweather-widget-container .header-body .conditions {
+html.yahooweather-widget-container .header-body .temp,
+html.yahooweather-widget-container .header-body .conditions {
   display: inline-block;
   float: left;
 }
-#yahooweather html.yahooweather-widget-container .header-body .temp p {
+html.yahooweather-widget-container .header-body .temp p {
   font-size: 64px;
   margin: 0;
 }
-#yahooweather html.yahooweather-widget-container .header-body .conditions-image {
+html.yahooweather-widget-container .header-body .conditions-image {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-#yahooweather html.yahooweather-widget-container .header-body .conditions-text {
+html.yahooweather-widget-container .header-body .conditions-text {
   font-size: 12px;
   margin: 0;
   text-align: center;
 }
-#yahooweather html.yahooweather-widget-container .forecast {
+html.yahooweather-widget-container .forecast {
   display: block;
   width: 100%;
   float: left;
   margin: 7.5px 0 0 0;
 }
-#yahooweather html.yahooweather-widget-container .forecast .daily {
+html.yahooweather-widget-container .forecast .daily {
   display: block;
   width: 20%;
   float: left;
 }
-#yahooweather html.yahooweather-widget-container .forecast .daily:first-child:before {
+html.yahooweather-widget-container .forecast .daily:first-child:before {
   content: none;
 }
-#yahooweather html.yahooweather-widget-container .forecast .daily:before {
+html.yahooweather-widget-container .forecast .daily:before {
   content: '';
   position: absolute;
   bottom: 7.5px;
@@ -92,13 +92,13 @@
   display: block;
   border-left: 1px solid #dedad8;
 }
-#yahooweather html.yahooweather-widget-container .forecast .daily p {
+html.yahooweather-widget-container .forecast .daily p {
   text-align: center;
   margin: 0;
 }
-#yahooweather html.yahooweather-widget-container .forecast .daily p.day {
+html.yahooweather-widget-container .forecast .daily p.day {
   font-size: 12px;
 }
-#yahooweather html.yahooweather-widget-container .forecast .daily p.temp {
+html.yahooweather-widget-container .forecast .daily p.temp {
   font-size: 10px;
 }
