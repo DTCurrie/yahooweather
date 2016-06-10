@@ -10,23 +10,25 @@
   height: 100%;
   overflow-x: hidden;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 62.5%;
 
   * {
     box-sizing: border-box;
   }
 
   &-container {
-    width: 310px;
-    height: 160px;
+    width: 31rem;
+    height: 16rem;
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
+    padding: 0;
     border: 1px solid #9a9391;
-    border-radius: 5px;
-    box-shadow: 7px 7px 5px #4d4d4d;
+    border-radius: 0.5rem;
+    box-shadow: 0.7rem 0.7rem 0.5rem #4d4d4d;
 
     .header {
       .block-container(100%);
@@ -37,13 +39,14 @@
       }
 
       &-text {
-        font-size: 18px;
+        font-family: inherit;
+        font-size: 1.8rem;
         //font-weight: bold;
-        margin: 10px 0 0 10px;
+        margin: 1rem 0 0 1rem;
       }
 
       &-body {
-        margin: 0 0 0 10px;
+        margin: 0 0 0 1rem;
 
         .temp,
         .conditions {
@@ -51,11 +54,10 @@
           float: left;
         }
 
-        .temp {
-          p {
-            font-size: 64px;
+        .temp-text {
+          font-family: inherit;
+            font-size: 6.4rem;
             margin: 0;
-          }
         }
 
         .conditions {
@@ -65,7 +67,8 @@
             margin-right: auto;
           }
           &-text {
-            font-size: 12px;
+            font-family: inherit;
+            font-size: 1.2rem;
             margin: 0;
             text-align: center;
           }
@@ -75,7 +78,7 @@
 
     .forecast {
       .block-container(100%);
-      margin: 7.5px 0 0 0;
+      margin: 0.75rem 0 0 0;
 
       .daily {
         .block-container(20%);
@@ -87,24 +90,25 @@
         &:before {
           content: '';
           position: absolute;
-          bottom: 7.5px;
-          height: 37px;
-          width: 1px;
+          bottom: 0.75rem;
+          height: 3.7rem;
+          width: 0.1rem;
           display: block;
-          border-left: 1px solid #dedad8;
+          border-left: 0.1rem solid #dedad8;
         }
 
         p {
+          font-family: inherit;
           text-align: center;
           margin: 0;
 
           &.day {
-            font-size: 12px;
+            font-size: 1.2rem;
             //font-weight: bold;
           }
 
           &.temp {
-            font-size: 10px;
+            font-size: 1rem;
           }
         }
       }

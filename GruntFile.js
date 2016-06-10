@@ -64,6 +64,20 @@ module.exports = function (grunt) {
                 }]
             }
         },
+        // Post Process CSS
+        postcss: {
+            all: {
+                options: {
+                    processors: [
+                        require('pixrem')({rootValue: 10}), // add fallbacks for rem units
+                        require('postcss-unnth')(),
+                        require('postcss-pseudoelements')(),
+                        require('autoprefixer')({browsers: 'last 2 versions'}) // add vendor prefixes
+                    ]
+                },
+                src: 'app/css/compiled/*.css'
+            }
+        },
         // Minify CSS files
         cssmin: {
             options: {
@@ -140,7 +154,7 @@ module.exports = function (grunt) {
         watch: {
             css: {
                 files: ['app/css/*.css'],
-                tasks: ['concat:css', 'cssmin', 'usebanner', 'cache_control', 'copy:css', 'copy:views']
+                tasks: ['concat:css', 'postcss', 'cssmin', 'usebanner', 'cache_control', 'copy:css', 'copy:views']
             },
             less: {
                 files: ['app/less/*.less'],
@@ -161,6 +175,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-banner');
     grunt.loadNpmTasks('grunt-cache-control');
@@ -168,5 +183,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Register tasks, run in order declared
-    grunt.registerTask('default', ['jshint', 'less', 'concat', 'uglify', 'cssmin', 'usebanner', 'cache_control', 'copy', 'watch']);
+    grunt.registerTask('default', ['jshint', 'less', 'concat', 'uglify', 'postcss', 'cssmin', 'usebanner', 'cache_control', 'copy', 'watch']);
 };

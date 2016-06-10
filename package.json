@@ -13,11 +13,11 @@
     "ejs": "latest",
     "express": "latest",
     "express-jwt": "latest",
-    "grunt": "latest",
     "jsonwebtoken": "latest",
     "method-override": "latest"
   },
   "devDependencies": {
+    "autoprefixer": "latest",
     "grunt": "latest",
     "grunt-banner": "latest",
     "grunt-cache-control": "latest",
@@ -26,7 +26,11 @@
     "grunt-contrib-copy": "latest",
     "grunt-contrib-jshint": "latest",
     "grunt-contrib-less": "latest",
+    "grunt-postcss": "latest",
     "grunt-contrib-uglify": "latest",
-    "grunt-contrib-watch": "latest"
+    "grunt-contrib-watch": "latest",
+    "pixrem": "latest",
+    "postcss-pseudoelements": "latest",
+    "postcss-unnth": "latest"
   }
 }
