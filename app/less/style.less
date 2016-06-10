@@ -1,5 +1,10 @@
 // scope widget to set styles specifically
-.yahooweather-widget {
+#yahooweather {
+
+  display: block;
+  border:none;
+  padding: 0;
+  margin:  0;
 
   .block-container(@percent-width) {
     display: block;
@@ -11,11 +16,12 @@
     box-sizing: border-box;
   }
 
-  // html
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  html {
+    .block-container(100%);
+    height: 100%;
+    overflow-x: hidden;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
 
   body {
     height: 100%;
