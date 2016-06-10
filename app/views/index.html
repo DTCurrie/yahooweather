@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" class="yahooweather-widget">
 <head>
-    <link href="https://rawgit.com/DTCurrie/yahooweather/master/widget/yahooweather.min.css" rel="stylesheet">
+    <link href="yahooweather.min.css" rel="stylesheet">
+    <!--<link href="https://rawgit.com/DTCurrie/yahooweather/master/widget/yahooweather.min.css" rel="stylesheet">-->
 </head>
 <body>
 <!-- Angular View -->
@@ -12,7 +13,7 @@
         </p>
         <div class="header-body">
             <div class="temp">
-                <p>{{ weather.item.condition.temp }}&deg;{{ weather.units.temperature}}</p>
+                <p>{{ weather.item.condition.temp }}&deg;<!--{{ weather.units.temperature}}--></p>
             </div>
             <div class="conditions">
                 <img ng-src="{{ weather.img }}" class="conditions-image">
@@ -23,15 +24,16 @@
         </div>
     </div>
     <div class="forecast">
-        <div class="daily" ng-repeat="day in weather.item.forecast">
+        <div class="daily" ng-repeat="day in weather.item.forecast | limitTo:5">
             <p class="day">{{ day.day }}</p>
-            <p class="temp">{{ day.high }} / {{ day.low }}</p>
+            <p class="temp">{{ day.high }}&deg; / {{ day.low }}&deg;</p>
         </div>
     </div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular.min.js"></script>
-<script src="https://rawgit.com/DTCurrie/yahooweather/master/widget/yahooweather.min.js"></script>
+<script src="yahooweather.min.js"></script>
+<!--<script src="https://rawgit.com/DTCurrie/yahooweather/master/widget/yahooweather.min.js"></script>-->
 <script>
     angular.element(document).ready(function () {
         angular.bootstrap(document, ['weather']);

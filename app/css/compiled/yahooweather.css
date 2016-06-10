@@ -1,140 +1,11 @@
 .yahooweather-widget {
-  /* http://meyerweb.com/eric/tools/css/reset/
-     v2.0 | 20110126
-     License: none (public domain)
-  */
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  /* HTML5 display-role reset for older browsers */
   width: 100%;
   height: 100%;
   overflow-x: hidden;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.yahooweather-widget body,
-.yahooweather-widget div,
-.yahooweather-widget span,
-.yahooweather-widget applet,
-.yahooweather-widget object,
-.yahooweather-widget iframe,
-.yahooweather-widget h1,
-.yahooweather-widget h2,
-.yahooweather-widget h3,
-.yahooweather-widget h4,
-.yahooweather-widget h5,
-.yahooweather-widget h6,
-.yahooweather-widget p,
-.yahooweather-widget blockquote,
-.yahooweather-widget pre,
-.yahooweather-widget a,
-.yahooweather-widget abbr,
-.yahooweather-widget acronym,
-.yahooweather-widget address,
-.yahooweather-widget big,
-.yahooweather-widget cite,
-.yahooweather-widget code,
-.yahooweather-widget del,
-.yahooweather-widget dfn,
-.yahooweather-widget em,
-.yahooweather-widget img,
-.yahooweather-widget ins,
-.yahooweather-widget kbd,
-.yahooweather-widget q,
-.yahooweather-widget s,
-.yahooweather-widget samp,
-.yahooweather-widget small,
-.yahooweather-widget strike,
-.yahooweather-widget strong,
-.yahooweather-widget sub,
-.yahooweather-widget sup,
-.yahooweather-widget tt,
-.yahooweather-widget var,
-.yahooweather-widget b,
-.yahooweather-widget u,
-.yahooweather-widget i,
-.yahooweather-widget center,
-.yahooweather-widget dl,
-.yahooweather-widget dt,
-.yahooweather-widget dd,
-.yahooweather-widget ol,
-.yahooweather-widget ul,
-.yahooweather-widget li,
-.yahooweather-widget fieldset,
-.yahooweather-widget form,
-.yahooweather-widget label,
-.yahooweather-widget legend,
-.yahooweather-widget table,
-.yahooweather-widget caption,
-.yahooweather-widget tbody,
-.yahooweather-widget tfoot,
-.yahooweather-widget thead,
-.yahooweather-widget tr,
-.yahooweather-widget th,
-.yahooweather-widget td,
-.yahooweather-widget article,
-.yahooweather-widget aside,
-.yahooweather-widget canvas,
-.yahooweather-widget details,
-.yahooweather-widget embed,
-.yahooweather-widget figure,
-.yahooweather-widget figcaption,
-.yahooweather-widget footer,
-.yahooweather-widget header,
-.yahooweather-widget hgroup,
-.yahooweather-widget menu,
-.yahooweather-widget nav,
-.yahooweather-widget output,
-.yahooweather-widget ruby,
-.yahooweather-widget section,
-.yahooweather-widget summary,
-.yahooweather-widget time,
-.yahooweather-widget mark,
-.yahooweather-widget audio,
-.yahooweather-widget video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-.yahooweather-widget article,
-.yahooweather-widget aside,
-.yahooweather-widget details,
-.yahooweather-widget figcaption,
-.yahooweather-widget figure,
-.yahooweather-widget footer,
-.yahooweather-widget header,
-.yahooweather-widget hgroup,
-.yahooweather-widget menu,
-.yahooweather-widget nav,
-.yahooweather-widget section {
-  display: block;
-}
-.yahooweather-widget body {
-  line-height: 1;
-}
-.yahooweather-widget ol,
-.yahooweather-widget ul {
-  list-style: none;
-}
-.yahooweather-widget blockquote,
-.yahooweather-widget q {
-  quotes: none;
-}
-.yahooweather-widget blockquote:before,
-.yahooweather-widget blockquote:after,
-.yahooweather-widget q:before,
-.yahooweather-widget q:after {
-  content: '';
-  content: none;
-}
-.yahooweather-widget table {
-  border-collapse: collapse;
-  border-spacing: 0;
+.yahooweather-widget * {
+  box-sizing: border-box;
 }
 .yahooweather-widget body {
   height: 100%;
@@ -142,12 +13,84 @@
 }
 .yahooweather-widget-container {
   width: 310px;
-  max-width: 310px;
   height: 160px;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  margin: auto!important;
+  margin: auto;
+  border: 1px solid #9a9391;
+  border-radius: 5px;
+  box-shadow: 7px 7px 5px #4d4d4d;
+}
+.yahooweather-widget-container .header {
+  display: block;
+  width: 100%;
+  float: left;
+}
+.yahooweather-widget-container .header-text,
+.yahooweather-widget-container .header-body {
+  display: block;
+  width: 100%;
+  float: left;
+}
+.yahooweather-widget-container .header-text {
+  font-size: 18px;
+  margin: 10px 0 0 10px;
+}
+.yahooweather-widget-container .header-body {
+  margin: 0 0 0 10px;
+}
+.yahooweather-widget-container .header-body .temp,
+.yahooweather-widget-container .header-body .conditions {
+  display: inline-block;
+  float: left;
+}
+.yahooweather-widget-container .header-body .temp p {
+  font-size: 64px;
+  margin: 0;
+}
+.yahooweather-widget-container .header-body .conditions-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.yahooweather-widget-container .header-body .conditions-text {
+  font-size: 12px;
+  margin: 0;
+  text-align: center;
+}
+.yahooweather-widget-container .forecast {
+  display: block;
+  width: 100%;
+  float: left;
+  margin: 7.5px 0 0 0;
+}
+.yahooweather-widget-container .forecast .daily {
+  display: block;
+  width: 20%;
+  float: left;
+}
+.yahooweather-widget-container .forecast .daily:first-child:before {
+  content: none;
+}
+.yahooweather-widget-container .forecast .daily:before {
+  content: '';
+  position: absolute;
+  bottom: 7.5px;
+  height: 37px;
+  width: 1px;
+  display: block;
+  border-left: 1px solid #dedad8;
+}
+.yahooweather-widget-container .forecast .daily p {
+  text-align: center;
+  margin: 0;
+}
+.yahooweather-widget-container .forecast .daily p.day {
+  font-size: 12px;
+}
+.yahooweather-widget-container .forecast .daily p.temp {
+  font-size: 10px;
 }
